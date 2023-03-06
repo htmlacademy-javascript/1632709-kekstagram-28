@@ -64,4 +64,4 @@ const createPhoto = () => {
 
 const createPhotos = () => Array.from({length: PICTURE_COUNT}, createPhoto);
 
-console.log(createPhotos());
+createPhotos();
