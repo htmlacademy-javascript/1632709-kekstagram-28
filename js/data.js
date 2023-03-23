@@ -40,7 +40,7 @@ const createMessage = () => `${getRandomArrayElement(LIST_OF_COMMENTS)}${getRand
 const createComment = () => {
   const comment = {
     id: commentId,
-    avatar: `img/avatar${getRandomInteger(1, 6)}.svg`,
+    avatar: `img/avatar-${getRandomInteger(1, 6)}.svg`,
     message: createMessage(),
     name: getRandomArrayElement(NAMES),
   };
