@@ -1,5 +1,6 @@
 const COMMENT_COUNTER = 5;
 
+
 const bigPicture = document.querySelector('.big-picture');
 const bigPictureCancel = document.querySelector('.big-picture__cancel');
 const bigPictureImg = document.querySelector('.big-picture__img img');
