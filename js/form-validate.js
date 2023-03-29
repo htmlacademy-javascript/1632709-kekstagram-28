@@ -63,7 +63,7 @@ const addValidator = () => {
   );
 };
 
-const resetPrisine = () => pristine.reset();
+const resetPristine = () => pristine.reset();
 const validatePristine = () => pristine.validate();
 
-export {addValidator, resetPrisine, validatePristine};
+export {addValidator, resetPristine, validatePristine};
