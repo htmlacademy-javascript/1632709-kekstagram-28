@@ -14,7 +14,7 @@ const pristine = new Pristine (form, {
 
 const isValidComment = (comment) => comment.length <= MAX_COMMENTS_LENGTH;
 
-const createHashtagArray = (value) => value.trim().split(' ').filter((item) => item);
+const createHashtagArray = (value) => value.trim().toLowerCase().split(' ').filter((item) => item);
 
 const isValidHashtag = (value) => {
   if (!value) {
@@ -41,19 +41,19 @@ const addValidator = () => {
   pristine.addValidator(
     hashtagField,
     isValidHashtag,
-    'Хэштег должен начинаться с "#", содержать буквы и цифры (не более 20 символов, включая #)',
+    'Хэштег должен начинаться с "#", содержать буквы и цифры (не более 20 символов, включая #)', 1, true,
   );
 
   pristine.addValidator(
     hashtagField,
     isUniqueHashtags,
-    'Хэштеги не должны повторяться',
+    'Хэштеги не должны повторяться', 1, true,
   );
 
   pristine.addValidator(
     hashtagField,
     isValidCount,
-    'Нельзя указать больше пяти хэштегов',
+    'Нельзя указать больше пяти хэштегов', 1, true,
   );
 
   pristine.addValidator(
